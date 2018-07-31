@@ -9,10 +9,10 @@ def index(request):
 
 def list(request):
     persons = Person.objects.all()
-    return render(request,'list.html','persons':'persons')
+    return render(request,'list.html',{'persons':'persons'})
 
 def add (request):
-     if request.method == 'POST':
+    if request.method == 'POST':
         form = PersonForm(request.POST)
         if form.is_valid():
             name = form.cleaned_data['your_name']
