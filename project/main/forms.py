@@ -1,7 +1,7 @@
 from django import forms
 from django.core.validators import validate_email
 
-from .models import Users
+from .models import Person
 
 class PersonForm(forms.Form):
     name = forms.CharField(label='Name', max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
