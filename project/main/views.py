@@ -15,7 +15,7 @@ def add (request):
     if request.method == 'POST':
         form = PersonForm(request.POST)
         if form.is_valid():
-            name = form.cleaned_data['your_name']
+            name = form.cleaned_data['name']
             email = form.cleaned_data['email']
             person = Person(name=name, email=email)
             person.save()
