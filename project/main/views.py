@@ -8,10 +8,11 @@ def index(request):
     return render (request,'index.html')
 
 def list(request):
-    persons = Person.objects.all()
+    users = Person.objects.all()
+    print(users)
     return render(request,'list.html',{'persons':'persons'})
 
-def add (request):
+def add(request):
     if request.method == 'POST':
         form = PersonForm(request.POST)
         if form.is_valid():

@@ -5,6 +5,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url('^$', views.index, name='home'),
-    url('^list$', views.list, name='list'),
-    url('^add$', views.add, name='add'),
+    url('^list/', views.list, name='list'),
+    url('^add/', views.add, name='add'),
 ]
