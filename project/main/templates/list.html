@@ -1,15 +1,16 @@
-{%extends 'base.html'%}
-{% load bootstrap4 %}
-{% block content %}
-    <div class="container">
-
-      <div class="row">
-        {% for user in users %}
-            <div class="col-md-6 wells">
-            <p> {{ user.name }}</p>
-              {{ user.email}}
-            </div>
-        {% endfor %}
+{%extends 'base.html'%} {% load bootstrap4 %} {% block content %}
+<div class="container">
+  <div class="row">
+      <ol>
+        {% for person in persons %}
+        <div class="col-md-12">
+        <li class="">
+          <p> {{ person.name }}</p>
+          <p> {{ person.email }}</p>
+        </li>
       </div>
-    </div>
+      {% endfor %}
+      </ol>
+  </div>
+</div>
 {% endblock%}

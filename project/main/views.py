@@ -8,9 +8,9 @@ def index(request):
     return render (request,'index.html')
 
 def list(request):
-    users = Person.objects.all()
-    print(users)
-    return render(request,'list.html',{'persons':'persons'})
+    persons = Person.objects.all()
+
+    return render(request,'list.html',{'persons':persons})
 
 def add(request):
     if request.method == 'POST':
